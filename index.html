@@ -4,95 +4,89 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>B & L | Bridal Brunch & Luncheon</title>
+<title>Invitation</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;500;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- AUDIO -->
-<audio id="music" src="music.mp3" loop></audio>
-
-<!-- PETALS + SPARKLES -->
-<div class="petals"></div>
-<div class="sparkles"></div>
+<audio id="bgMusic" src="music.mp3" loop></audio>
 
 <!-- ENVELOPE -->
-<section class="envelope-section">
-    <div class="envelope" id="envelope">
-        <div class="flap"></div>
-        <div class="letter">
-            <div class="letter-content">
-                <h1>B & L</h1>
-                <p>Bridal Brunch & Luncheon</p>
-                <p class="sub">Before Forever</p>
-                <p class="hosts">Hosted with Love<br>Uzma & Memoona</p>
-            </div>
-        </div>
-        <div class="seal" id="seal">Tap</div>
+<section class="envelope-section" id="envelopeSection">
+  <div class="envelope" id="envelope">
+    <div class="flap"></div>
+    <div class="seal" id="seal"></div>
+
+    <div class="letter">
+      <h1>B & L</h1>
+      <p>Bridal Brunch & Luncheon</p>
+      <p>Before Forever</p>
+      <p>Hosted with Love by</p>
+      <p>Uzma & Memoona</p>
     </div>
+  </div>
 </section>
 
-<!-- MAIN CONTENT -->
-<div id="mainContent">
+<!-- APP -->
+<div id="app" class="hidden">
 
-<section class="welcome">
-    <h2>Welcome</h2>
-    <p>Ladies Only</p>
-</section>
-
-<section class="details">
-    <h2>Event Details</h2>
-
-    <div class="glass-card">
-        <p>📅 Tuesday, 21 July 2026</p>
-        <p>🕙 10:00 AM – 4:00 PM</p>
+  <!-- 1 -->
+  <section class="scene active">
+    <div class="card-ui">
+      <h1 class="title">B & L</h1>
+      <p>Before Forever</p>
     </div>
+  </section>
 
-    <!-- COUNTDOWN -->
-    <div id="countdown"></div>
-
-</section>
-
-<!-- INTERACTIVE CARDS -->
-<section class="cards">
-
-<div class="flip-card">
-    <div class="flip-inner">
-        <div class="front">Dress Code</div>
-        <div class="back">🤍 White</div>
+  <!-- 2 -->
+  <section class="scene">
+    <div class="card-ui">
+      <h2>Welcome</h2>
+      <p>We invite you to celebrate with us</p>
+      <div class="heart">♡</div>
     </div>
-</div>
+  </section>
 
-<div class="flip-card">
-    <div class="flip-inner">
-        <div class="front">Venue</div>
-        <div class="back">📍 Khan Haveli<br>(Kajoor Wala Ghar)<br>Hayyal Sharif</div>
+  <!-- 3 -->
+  <section class="scene">
+    <div class="card-ui">
+      <h2>Event Details</h2>
+      <p>Tuesday, 21 July 2026</p>
+      <p>10:00 AM – 4:00 PM</p>
+      <div id="countdown"></div>
     </div>
-</div>
+  </section>
 
-</section>
+  <!-- 4 -->
+  <section class="scene">
+    <div class="card-ui">
+      <h2>Tap to Reveal</h2>
+      <div class="heart-reveal" onclick="reveal(this)">💗</div>
+      <p class="hidden-text">Dress Code: White</p>
+    </div>
+  </section>
 
-<!-- HOSTS -->
-<section class="hosts">
-    <h2>Hosted with Love</h2>
-    <p>Uzma & Memoona</p>
+  <!-- 5 -->
+  <section class="scene">
+    <div class="card-ui">
+      <h2>Tap to Reveal</h2>
+      <div class="heart-reveal" onclick="reveal(this)">💗</div>
+      <p class="hidden-text">Khan Haveli, Hayyal Sharif</p>
+    </div>
+  </section>
 
-    <h3>Event Host</h3>
-    <p>Hareem</p>
-
-    <h3>Photography Courtesy</h3>
-    <p>Harmain</p>
-</section>
-
-<!-- BUTTONS -->
-<section class="actions">
-    <a href="https://wa.me/923352455577" target="_blank">RSVP</a>
-    <a href="https://maps.google.com/?q=33.5404378,73.0068601" target="_blank">Location</a>
-</section>
+  <!-- 6 -->
+  <section class="scene">
+    <div class="card-ui">
+      <h2>RSVP</h2>
+      <a href="https://wa.me/923352455577">WhatsApp</a>
+      <a href="https://maps.google.com/?q=33.5404378,73.0068601">Location</a>
+    </div>
+  </section>
 
 </div>
 
