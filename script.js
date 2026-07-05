@@ -1,73 +1,142 @@
-const seal = document.getElementById("seal");
-const envelope = document.getElementById("envelope");
-const app = document.getElementById("app");
-const music = document.getElementById("music");
+// Open Invitation
+const music = document.getElementById("bgMusic");
 
-seal.addEventListener("click", async () => {
-  envelope.classList.add("open");
+enterBtn.addEventListener("click", () => {
+    music.play();
+    document.querySelector(".details").scrollIntoView({
+        behavior: "smooth"
+    });
+});
+const enterBtn = document.getElementById("enter");
 
-  try{
-    await music.play();
-  }catch(e){}
-
-  setTimeout(()=>{
-    document.getElementById("envelopeScreen").style.display="none";
-    app.classList.remove("hidden");
-  },1500);
+enterBtn.addEventListener("click", () => {
+    document.querySelector(".details").scrollIntoView({
+        behavior: "smooth"
+    });
 });
 
-/* SCENE CONTROL */
-let current = 0;
-const scenes = document.querySelectorAll(".scene");
+// =======================
+// Countdown
+// =======================
 
-function next(){
-  scenes[current].classList.remove("active");
-  current++;
+const weddingDate = new Date("July 21, 2026 10:00:00").getTime();
 
-  if(scenes[current]){
-    scenes[current].classList.add("active");
-  }
+const countdown = document.createElement("section");
+countdown.className = "countdown";
+
+countdown.innerHTML = `
+<h2>Countdown</h2>
+
+<div class="timer">
+<div><span id="days">0</span><small>Days</small></div>
+<div><span id="hours">0</span><small>Hours</small></div>
+<div><span id="minutes">0</span><small>Minutes</small></div>
+<div><span id="seconds">0</span><small>Seconds</small></div>
+</div>
+`;
+
+document.querySelector(".details").after(countdown);
+
+setInterval(function(){
+
+const now = new Date().getTime();
+
+const distance = weddingDate-now;
+
+const days=Math.floor(distance/(1000*60*60*24));
+
+const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+const minutes=Math.floor((distance%(1000*60*60))/(1000*60));
+
+const seconds=Math.floor((distance%(1000*60))/1000);
+
+document.getElementById("days").innerHTML=days;
+document.getElementById("hours").innerHTML=hours;
+document.getElementById("minutes").innerHTML=minutes;
+document.getElementById("seconds").innerHTML=seconds;
+
+},1000);
+
+
+// =======================
+// Fade Animation
+// =======================
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity=1;
+
+entry.target.style.transform="translateY(0)";
+
 }
 
-document.addEventListener("click", next);
-
-/* SWIPE */
-let startY=0;
-document.addEventListener("touchstart", e=>{
-  startY = e.touches[0].clientY;
 });
 
-document.addEventListener("touchend", e=>{
-  let endY = e.changedTouches[0].clientY;
-  if(startY - endY > 50){
-    next();
-  }
 });
 
-/* HEART */
-function reveal(el){
-  el.nextElementSibling.classList.add("show");
-  el.animate([
-    {transform:"scale(1)"},
-    {transform:"scale(1.6)"},
-    {transform:"scale(1.3)"}
-  ],{duration:500});
+document.querySelectorAll("section").forEach(sec=>{
+
+sec.style.opacity=0;
+
+sec.style.transform="translateY(80px)";
+
+sec.style.transition="1s";
+
+observer.observe(sec);
+
+});
+
+
+// =======================
+// Floating Petals
+// =======================
+
+for(let i=0;i<25;i++){
+
+const flower=document.createElement("div");
+
+flower.innerHTML="🌸";
+
+flower.className="flower";
+
+flower.style.left=Math.random()*100+"vw";
+
+flower.style.animationDuration=8+Math.random()*10+"s";
+
+flower.style.fontSize=16+Math.random()*18+"px";
+
+document.body.appendChild(flower);
+
 }
 
-/* COUNTDOWN */
-const countdown = document.getElementById("countdown");
-const date = new Date("July 21, 2026 10:00:00").getTime();
+
+// =======================
+// Sparkles
+// =======================
 
 setInterval(()=>{
-  if(!countdown) return;
 
-  const now = new Date().getTime();
-  const gap = date - now;
+const spark=document.createElement("div");
 
-  const d = Math.floor(gap/(1000*60*60*24));
-  const h = Math.floor((gap/(1000*60*60))%24);
-  const m = Math.floor((gap/(1000*60))%60);
-  const s = Math.floor((gap/1000)%60);
+spark.className="sparkle";
 
-  countdown.innerHTML = `${d}d ${h}h ${m}m ${s}s`;
-},1000);
+spark.innerHTML="✨";
+
+spark.style.left=Math.random()*100+"vw";
+
+spark.style.top=Math.random()*100+"vh";
+
+document.body.appendChild(spark);
+
+setTimeout(()=>{
+
+spark.remove();
+
+},2500);
+
+},700);     
