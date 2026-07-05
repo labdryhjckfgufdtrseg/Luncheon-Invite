@@ -8,12 +8,16 @@ enterBtn.addEventListener("click", () => {
     });
 });
 const enterBtn = document.getElementById("enter");
+const music = document.getElementById("bgMusic");
 
 enterBtn.addEventListener("click", () => {
+    music.play();
+
     document.querySelector(".details").scrollIntoView({
         behavior: "smooth"
     });
 });
+
 
 // =======================
 // Countdown
