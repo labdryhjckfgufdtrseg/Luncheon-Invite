@@ -4,72 +4,95 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Invitation</title>
+<title>B & L | Bridal Brunch & Luncheon</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;500;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<audio id="bgMusic" src="music.mp3.mp3" loop></audio>
+<!-- AUDIO -->
+<audio id="music" src="music.mp3" loop></audio>
+
+<!-- PETALS + SPARKLES -->
+<div class="petals"></div>
+<div class="sparkles"></div>
 
 <!-- ENVELOPE -->
-<section class="envelope-section" id="envelopeSection">
-  <div class="envelope" id="envelope">
-    <div class="flap"></div>
-    <div class="seal" id="seal"></div>
-
-    <div class="letter">
-      <h1>B & L</h1>
-      <p>Bridal Brunch & Luncheon</p>
-      <p>Before Forever</p>
-      <p>Hosted with Love by</p>
-      <p>Uzma & Memoona</p>
+<section class="envelope-section">
+    <div class="envelope" id="envelope">
+        <div class="flap"></div>
+        <div class="letter">
+            <div class="letter-content">
+                <h1>B & L</h1>
+                <p>Bridal Brunch & Luncheon</p>
+                <p class="sub">Before Forever</p>
+                <p class="hosts">Hosted with Love<br>Uzma & Memoona</p>
+            </div>
+        </div>
+        <div class="seal" id="seal">Tap</div>
     </div>
-  </div>
 </section>
 
-<!-- SCENES -->
-<div id="app" class="hidden">
+<!-- MAIN CONTENT -->
+<div id="mainContent">
 
-  <section class="scene active">
-    <h1 class="title">B & L</h1>
-    <p>Before Forever</p>
-  </section>
-
-  <section class="scene">
+<section class="welcome">
     <h2>Welcome</h2>
-    <p>We invite you to celebrate with us</p>
-  </section>
+    <p>Ladies Only</p>
+</section>
 
-  <section class="scene">
+<section class="details">
     <h2>Event Details</h2>
-    <p>Tuesday, 21 July 2026</p>
-    <p>10:00 AM – 4:00 PM</p>
+
+    <div class="glass-card">
+        <p>📅 Tuesday, 21 July 2026</p>
+        <p>🕙 10:00 AM – 4:00 PM</p>
+    </div>
+
+    <!-- COUNTDOWN -->
     <div id="countdown"></div>
-  </section>
 
-  <section class="scene">
-    <h2>Tap to Reveal</h2>
-    <div class="card" onclick="reveal(this)">
-      🤍 Dress Code: White
+</section>
+
+<!-- INTERACTIVE CARDS -->
+<section class="cards">
+
+<div class="flip-card">
+    <div class="flip-inner">
+        <div class="front">Dress Code</div>
+        <div class="back">🤍 White</div>
     </div>
-  </section>
+</div>
 
-  <section class="scene">
-    <h2>Tap to Reveal</h2>
-    <div class="card" onclick="reveal(this)">
-      📍 Khan Haveli, Hayyal Sharif
+<div class="flip-card">
+    <div class="flip-inner">
+        <div class="front">Venue</div>
+        <div class="back">📍 Khan Haveli<br>(Kajoor Wala Ghar)<br>Hayyal Sharif</div>
     </div>
-  </section>
+</div>
 
-  <section class="scene">
-    <h2>RSVP</h2>
-    <a href="https://wa.me/923352455577">WhatsApp</a>
-    <a href="https://maps.google.com/?q=33.5404378,73.0068601">Location</a>
-  </section>
+</section>
+
+<!-- HOSTS -->
+<section class="hosts">
+    <h2>Hosted with Love</h2>
+    <p>Uzma & Memoona</p>
+
+    <h3>Event Host</h3>
+    <p>Hareem</p>
+
+    <h3>Photography Courtesy</h3>
+    <p>Harmain</p>
+</section>
+
+<!-- BUTTONS -->
+<section class="actions">
+    <a href="https://wa.me/923352455577" target="_blank">RSVP</a>
+    <a href="https://maps.google.com/?q=33.5404378,73.0068601" target="_blank">Location</a>
+</section>
 
 </div>
 
