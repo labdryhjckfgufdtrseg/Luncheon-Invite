@@ -17,76 +17,81 @@
 <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<!-- HERO -->
-<section class="card hero">
-    <div class="glass">
-        <h1>Bridal Brunch<br>& Luncheon</h1>
-        <p class="tag">Before Forever</p>
-        <button id="enter">Open Invitation</button>
+<!-- PARTICLES -->
+<div class="petals"></div>
+<div class="sparkles"></div>
+
+<!-- ENVELOPE -->
+<section class="envelope-section">
+    <div class="envelope" id="envelope">
+        <div class="flap"></div>
+
+        <div class="letter">
+            <div class="letter-content">
+                <h1 class="shimmer">Bridal Luncheon Soirée</h1>
+                <p>Before Forever</p>
+                <p class="small">Hosted with Love<br>Uzma & Memoona</p>
+            </div>
+        </div>
+
+        <div class="seal" id="openBtn"></div>
     </div>
 </section>
 
-<!-- LADIES -->
-<section class="card">
-    <h2>Ladies Only</h2>
-    <p>
-    Join us for an afternoon of love, laughter and unforgettable memories
-    as we celebrate before the beginning of forever.
-    </p>
+<!-- MAIN -->
+<div class="slider" id="main">
+
+<section class="slide">
+<h2>Welcome</h2>
+<p>With love, Uzma & Memoona invite you to a graceful Bridal Luncheon Soirée — a beautiful celebration of joy, beauty, and togetherness.</p>
 </section>
 
-<!-- DETAILS -->
-<section class="card">
-    <h2>Event Details</h2>
-    <p>📅 Tuesday, 21 July 2026</p>
-    <p>🕙 10:00 AM – 4:00 PM</p>
+<section class="slide">
+<h2>Event Details</h2>
+<p>📅 Tuesday, 21 July 2026</p>
+<p>🕙 10:00 AM – 4:00 PM</p>
 </section>
 
-<!-- COUNTDOWN -->
-<section class="card">
-    <h2>Countdown</h2>
-    <div id="countdown"></div>
+<section class="slide">
+<h2>Countdown</h2>
+<div id="countdown"></div>
 </section>
 
-<!-- DRESS -->
-<section class="card reveal-card">
-    <h2>Tap to Reveal</h2>
-    <div class="heart" onclick="reveal(this)">❤</div>
-    <p class="hidden">🤍 Dress Code: White</p>
+<section class="slide reveal">
+<h2>Tap to Reveal</h2>
+<div class="heart" onclick="reveal(this)"></div>
+<p class="hidden">🤍 White</p>
 </section>
 
-<!-- VENUE REVEAL -->
-<section class="card reveal-card">
-    <h2>Tap to Reveal</h2>
-    <div class="heart" onclick="reveal(this)">❤</div>
-    <p class="hidden">
-    📍 Khan Haveli (Kajoor Wala Ghar)<br>Hayyal Sharif
-    </p>
+<section class="slide reveal">
+<h2>Tap to Reveal</h2>
+<div class="heart" onclick="reveal(this)"></div>
+<p class="hidden">Khan Haveli (Kajoor Wala Ghar)<br>Hayyal Sharif</p>
 </section>
 
-<!-- HOSTS -->
-<section class="card">
-    <h2>Hosted with Love</h2>
-    <h3>Uzma & Memoona</h3>
-
-    <h2>Event Host</h2>
-    <h3>Hareem</h3>
-
-    <h2>Photography Courtesy</h2>
-    <h3>Harmain</h3>
+<section class="slide dark">
+<p>We are honored to have you as part of our celebration.</p>
 </section>
 
-<!-- RSVP -->
-<section class="card">
-    <h2>RSVP</h2>
-    <a href="https://wa.me/923352455577">WhatsApp</a>
+<section class="slide">
+<h2>RSVP</h2>
+<a href="https://wa.me/923352455577">WhatsApp</a>
+<a href="https://maps.google.com/?q=33.5404378,73.0068601">Location</a>
+
+<div class="hosts">
+<p>Hosted with Love</p>
+<h3>Uzma & Memoona</h3>
+
+<p>Event Host</p>
+<h3>Hareem</h3>
+
+<p>Photography</p>
+<h3>Harmain</h3>
+</div>
+
 </section>
 
-<!-- LOCATION -->
-<section class="card">
-    <h2>Venue</h2>
-    <a href="https://maps.google.com/?q=33.5404378,73.0068601">Get Directions</a>
-</section>
+</div>
 
 <script src="script.js"></script>
 </body>
