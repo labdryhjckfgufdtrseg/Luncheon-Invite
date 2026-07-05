@@ -23,14 +23,19 @@ const scenes = document.querySelectorAll(".scene");
 /* NEXT */
 function nextScene(){
   scenes[current].classList.remove("active");
+
   current++;
+
   if(scenes[current]){
     scenes[current].classList.add("active");
     animateScene(current);
+
+    window.scrollTo({
+      top: window.innerHeight * current,
+      behavior: "smooth"
+    });
   }
 }
-
-document.addEventListener("click", nextScene);
 
 /* SWIPE */
 let startY=0;
