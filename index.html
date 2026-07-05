@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Luxury Wedding Invitation</title>
+
+<title>Invitation</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 
@@ -12,18 +13,12 @@
 
 <body>
 
-<audio id="bgMusic" src="music.mp3" loop></audio>
-
-<!-- PARTICLES -->
-<div class="sparkles"></div>
-<div class="petals"></div>
+<audio id="bgMusic" src="music.mp3.mp3" loop></audio>
 
 <!-- ENVELOPE -->
 <section class="envelope-section" id="envelopeSection">
   <div class="envelope" id="envelope">
-
     <div class="flap"></div>
-
     <div class="seal" id="seal"></div>
 
     <div class="letter">
@@ -33,55 +28,48 @@
       <p>Hosted with Love by</p>
       <p>Uzma & Memoona</p>
     </div>
-
   </div>
 </section>
 
-<!-- MAIN CONTENT -->
-<div id="mainContent" class="hidden">
+<!-- SCENES -->
+<div id="app" class="hidden">
 
-<section class="section welcome glass">
-  <h2>Welcome</h2>
-  <p>We warmly invite you to celebrate a beautiful beginning filled with elegance, joy, and love.</p>
-</section>
+  <section class="scene active">
+    <h1 class="title">B & L</h1>
+    <p>Before Forever</p>
+  </section>
 
-<section class="section glass">
-  <h2>Ladies Only</h2>
-</section>
+  <section class="scene">
+    <h2>Welcome</h2>
+    <p>We invite you to celebrate with us</p>
+  </section>
 
-<section class="section glass">
-  <h2>Event Details</h2>
-  <p>Tuesday, 21 July 2026</p>
-  <p>10:00 AM – 4:00 PM</p>
-  <div id="countdown"></div>
-</section>
+  <section class="scene">
+    <h2>Event Details</h2>
+    <p>Tuesday, 21 July 2026</p>
+    <p>10:00 AM – 4:00 PM</p>
+    <div id="countdown"></div>
+  </section>
 
-<section class="section cards">
-  <div class="card" onclick="flipCard(this)">
-    <div class="inner">
-      <div class="front">Dress Code</div>
-      <div class="back">🤍 White</div>
+  <section class="scene">
+    <h2>Tap to Reveal</h2>
+    <div class="card" onclick="reveal(this)">
+      🤍 Dress Code: White
     </div>
-  </div>
+  </section>
 
-  <div class="card" onclick="flipCard(this)">
-    <div class="inner">
-      <div class="front">Venue</div>
-      <div class="back">📍 Khan Haveli<br>Kajoor Wala Ghar<br>Hayyal Sharif</div>
+  <section class="scene">
+    <h2>Tap to Reveal</h2>
+    <div class="card" onclick="reveal(this)">
+      📍 Khan Haveli, Hayyal Sharif
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section glass hosts">
-  <p>Hosted with Love Uzma & Memoona</p>
-  <p>Event Host Hareem</p>
-  <p>Photography Courtesy Harmain</p>
-</section>
-
-<section class="section rsvp">
-  <a href="https://wa.me/923352455577" target="_blank">RSVP</a>
-  <a href="https://maps.google.com/?q=33.5404378,73.0068601" target="_blank">Location</a>
-</section>
+  <section class="scene">
+    <h2>RSVP</h2>
+    <a href="https://wa.me/923352455577">WhatsApp</a>
+    <a href="https://maps.google.com/?q=33.5404378,73.0068601">Location</a>
+  </section>
 
 </div>
 
